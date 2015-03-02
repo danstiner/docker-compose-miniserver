@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LOG_FILE=/var/log/duckdns.log
+
+now=$(date)
+url="https://www.duckdns.org/update?domains=$DUCKDNS_DOMAIN&token=$DUCKDNS_TOKEN&ip="
+
+echo "Updating dns entry at: $now" >> $LOG_FILE
+echo "GET $url" >> $LOG_FILE
+
+echo url="$url" | curl -s -o /dev/null -w "%{http_code}" --config - >> $LOG_FILE 2>&1
