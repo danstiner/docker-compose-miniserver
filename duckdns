@@ -1,5 +1,8 @@
 #!/bin/bash
 
+${DUCKDNS_DOMAIN:?"Need to set target domain to update dns entry for"}
+${DUCKDNS_TOKEN:?"Need to set authentication token"}
+
 LOG_FILE=/var/log/duckdns.log
 
 now=$(date)
