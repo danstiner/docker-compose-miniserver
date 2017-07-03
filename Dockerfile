@@ -1,7 +1,9 @@
-FROM mazzolino/armhf-ubuntu:14.04
+FROM arm32v6/alpine:latest
 
-RUN apt-get update && apt-get install -y --force-yes curl
+RUN apk --no-cache add curl
 
-ADD duckdns /etc/cron.hourly/
+ADD crontab /etc/crontabs/root
+ADD entrypoint.sh /app/
+ADD duckdns.sh /app/
 
-CMD ["cron", "-f"]
+ENTRYPOINT /app/entrypoint.sh
