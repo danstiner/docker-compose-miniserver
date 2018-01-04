@@ -1,6 +1,6 @@
 # docker-duckdns-armhf
 
-Docker image for keeping a dynamic DNS up to date using [Duck DNS](https://www.duckdns.org/) on a armhf device like a Raspberry PI. Currently only supports IPv4.
+Docker image for keeping a dynamic DNS up to date using [Duck DNS](https://www.duckdns.org/) on a armhf device like a Raspberry Pi. Currently only supports IPv4.
 
 ## Usage
 
