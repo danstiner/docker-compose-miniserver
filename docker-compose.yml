@@ -1,0 +1,5 @@
+version: '3'
+services:
+  duckdns:
+    build: ./duckdns
+    env_file: duckdns.env
