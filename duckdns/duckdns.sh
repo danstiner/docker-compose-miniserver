@@ -1,6 +1,6 @@
 #!/bin/sh
 
-url="https://www.duckdns.org/update?domains=$DUCKDNS_DOMAIN&token=$DUCKDNS_TOKEN&verbose=true"
+url="https://www.duckdns.org/update?domains=$DUCKDNS_DOMAINS&token=$DUCKDNS_TOKEN&verbose=true"
 
 echo "GET $url"
 
@@ -16,4 +16,3 @@ else
     exit 1
 fi
 
-echo ""
