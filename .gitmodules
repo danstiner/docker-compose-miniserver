@@ -1,0 +1,3 @@
+[submodule "cloudflare-dns-server"]
+	path = cloudflare-dns-server
+	url = https://github.com/qdm12/cloudflare-dns-server.git
