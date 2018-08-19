@@ -3,3 +3,10 @@ services:
   duckdns:
     build: ./duckdns
     env_file: duckdns.env
+  cloudflare-dns:
+    build: ./cloudflare-dns-server
+    command: -vvv
+    ports:
+      - 53:53/udp
+    network_mode: bridge
+    restart: always
