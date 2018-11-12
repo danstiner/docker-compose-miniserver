@@ -3,6 +3,7 @@ services:
   duckdns:
     build: ./duckdns
     env_file: duckdns.env
+    restart: always
   cloudflare-dns:
     build: ./cloudflare-dns-server
     command: -vvv
