@@ -1,8 +1,6 @@
 #!/bin/sh
 
-url="https://www.duckdns.org/update?domains=$DUCKDNS_DOMAINS&token={DUCKDNS_TOKEN_HIDDEN}&verbose=true"
-
-echo "GET $url"
+url="https://www.duckdns.org/update?domains=${DUCKDNS_DOMAINS}&token=${DUCKDNS_TOKEN}&verbose=true"
 
 response=$(curl --silent "$url")
 
@@ -15,4 +13,3 @@ else
     echo "$response" 1>&2
     exit 1
 fi
-
