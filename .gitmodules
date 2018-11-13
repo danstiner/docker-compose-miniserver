@@ -4,3 +4,9 @@
 [submodule "docker-openvpn"]
 	path = docker-openvpn
 	url = https://github.com/kylemanna/docker-openvpn.git
+[submodule "docker-transmission-openvpn"]
+	path = docker-transmission-openvpn
+	url = https://github.com/haugene/docker-transmission-openvpn.git
+[submodule "pms-docker"]
+	path = pms-docker
+	url = https://github.com/plexinc/pms-docker.git
