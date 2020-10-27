@@ -29,7 +29,7 @@ services:
       - PGID=1000
       - TZ=Europe/London
       - URL=danielstiner.me
-      - SUBDOMAINS=stream-backend,server.stream
+      - SUBDOMAINS=server.stream,
       - VALIDATION=http
       - EMAIL=danstiner@gmail.com
       - ONLY_SUBDOMAINS=true #optional
