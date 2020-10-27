@@ -7,3 +7,34 @@ services:
       - 53:53/udp
     network_mode: bridge
     restart: always
+  ftl:
+    build: ./janus-ftl-plugin
+    container_name: ftl
+    environment:
+      - DOCKER_IP=24.35.78.11
+    ports:
+      - 8084:8084/tcp
+      - 8088:8088/tcp 
+      - 8089:8089/tcp
+      - 9000-9100:9000-9100/udp
+      - 20000-20100:20000-20100/udp
+    restart: unless-stopped
+  swag:
+    build: ./swag
+    container_name: swag
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - URL=danielstiner.me
+      - SUBDOMAINS=stream-backend,server.stream
+      - VALIDATION=http
+      - EMAIL=danstiner@gmail.com
+      - ONLY_SUBDOMAINS=true #optional
+      - EXTRA_DOMAINS= #optional
+    ports:
+      - 8443:443
+      - 8000:80
+    restart: unless-stopped
