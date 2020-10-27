@@ -10,3 +10,6 @@
 [submodule "pms-docker"]
 	path = pms-docker
 	url = https://github.com/plexinc/pms-docker.git
+[submodule "janus-ftl-plugin"]
+	path = janus-ftl-plugin
+	url = https://github.com/Glimesh/janus-ftl-plugin.git
