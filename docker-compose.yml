@@ -7,13 +7,3 @@ services:
       - 53:53/udp
     network_mode: bridge
     restart: always
-  openvpn:
-    cap_add:
-     - NET_ADMIN
-    build: ./docker-openvpn
-    ports:
-     - 1194:1194/udp
-    restart: always
-    volumes:
-     - ./openvpn-data/conf:/etc/openvpn
-
