@@ -12,6 +12,7 @@ services:
     container_name: ftl
     environment:
       - DOCKER_IP=24.35.78.11
+      - FTL_SERVICE_DUMMY_HMAC_KEY=${FTL_SERVICE_DUMMY_HMAC_KEY}
     ports:
       - 8084:8084/tcp
       - 8088:8088/tcp 
